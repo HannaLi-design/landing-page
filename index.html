@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blumenshop – Handverlesene Blumensträuße</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Підключення CSS — шлях відносний до index.html -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========================================
+       HEADER
+       ======================================== -->
+  <header class="header" id="top">
+    <nav class="nav container">
+
+      <a href="#top" class="nav-logo" aria-label="Startseite">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="5" fill="#8B2252"/>
+          <ellipse cx="20" cy="9" rx="4" ry="7" fill="#C4587A" opacity="0.85"/>
+          <ellipse cx="20" cy="31" rx="4" ry="7" fill="#C4587A" opacity="0.85"/>
+          <ellipse cx="9" cy="20" rx="7" ry="4" fill="#E8A0B4" opacity="0.85"/>
+          <ellipse cx="31" cy="20" rx="7" ry="4" fill="#E8A0B4" opacity="0.85"/>
+          <ellipse cx="12" cy="12" rx="4" ry="6" fill="#C4587A" opacity="0.7" transform="rotate(-45 12 12)"/>
+          <ellipse cx="28" cy="28" rx="4" ry="6" fill="#C4587A" opacity="0.7" transform="rotate(-45 28 28)"/>
+          <ellipse cx="28" cy="12" rx="4" ry="6" fill="#E8A0B4" opacity="0.7" transform="rotate(45 28 12)"/>
+          <ellipse cx="12" cy="28" rx="4" ry="6" fill="#E8A0B4" opacity="0.7" transform="rotate(45 12 28)"/>
+        </svg>
+        <span class="nav-logo-text">Blumenshop</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">Über uns</a></li>
+        <li><a href="#catalog">Katalog</a></li>
+        <li><a href="#process">Lieferung</a></li>
+        <li><a href="#reviews">Bewertungen</a></li>
+        <li><a href="#contact">Kontakte</a></li>
+      </ul>
+
+      <a href="#order" class="btn btn-primary" style="display:none" id="navCta">Blumen wählen</a>
+
+      <button class="nav-burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========================================
+       HERO
+       ======================================== -->
+  <section class="hero" aria-label="Startbereich">
+    <div class="container hero-inner">
+
+      <div class="hero-image-wrap reveal">
+        <!--
+          ЯК ДОДАТИ СВОЄ ФОТО:
+          1. Поклади фото у папку images/ (наприклад: images/hero.jpg)
+          2. Заміни div нижче на: <img src="images/hero.jpg" alt="Blumenstrauß">
+        -->
+        <div style="
+          width:100%; min-height:380px; border-radius:50% 30% 50% 30%;
+          background: linear-gradient(135deg,#f8bbd0,#c4587a);
+          display:flex; align-items:center; justify-content:center;
+          color:white; font-size:0.9rem; text-align:center; padding:20px;
+          box-shadow:0 8px 32px rgba(139,34,82,0.25);
+          animation: float 6s ease-in-out infinite;
+        ">
+          🌸<br><small>Ersetze diesen Block durch &lt;img src="images/hero.jpg"&gt;</small>
+        </div>
+      </div>
+
+      <div class="hero-content reveal" style="transition-delay:0.15s">
+        <h1 class="hero-title">
+          Verzaubern Sie Ihre Liebsten mit handverlesenen Blumensträußen
+        </h1>
+        <p class="hero-text">
+          Die Herzen berühren – jetzt bestellen und Freude schenken!
+        </p>
+        <a href="#catalog" class="btn btn-outline">Jetzt entdecken</a>
+        <p class="hero-shipping">🚚 Versandkostenfrei ab 50 € Bestellwert</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       BENEFITS BAR
+       ======================================== -->
+  <div class="benefits" aria-label="Unsere Vorteile">
+    <div class="container">
+      <ul class="benefits-grid" role="list">
+        <li class="benefit-item reveal">
+          <div class="benefit-icon" aria-hidden="true">⚙️</div>
+          <span>Frischegarantie</span>
+        </li>
+        <li class="benefit-item reveal" style="transition-delay:0.1s">
+          <div class="benefit-icon" aria-hidden="true">🚗</div>
+          <span>Express-Lieferung</span>
+        </li>
+        <li class="benefit-item reveal" style="transition-delay:0.2s">
+          <div class="benefit-icon" aria-hidden="true">💐</div>
+          <span>Handgebundene Sträuße</span>
+        </li>
+        <li class="benefit-item reveal" style="transition-delay:0.3s">
+          <div class="benefit-icon" aria-hidden="true">🎁</div>
+          <span>Versandkostenfrei ab 50 €</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ========================================
+       ABOUT
+       ======================================== -->
+  <section class="section" id="about" aria-label="Über uns">
+    <div class="container about-inner">
+
+      <div class="reveal" style="transition-delay:0.1s">
+        <!--
+          ЯК ДОДАТИ ФОТО:
+          Заміни div на: <img src="images/about.jpg" alt="Floristin" class="about-image">
+        -->
+        <div style="
+          width:100%; min-height:340px; border-radius:20px 4px 20px 4px;
+          background:linear-gradient(135deg,#fce4ec,#c4587a);
+          display:flex; align-items:center; justify-content:center;
+          color:white; font-size:0.9rem; text-align:center; padding:20px;
+          box-shadow:0 8px 24px rgba(139,34,82,0.18);
+        ">
+          ✂️🌿<br><small>Foto: Floristin bei der Arbeit</small>
+        </div>
+      </div>
+
+      <div class="about-content reveal" style="transition-delay:0.2s">
+        <h2 class="section-title">Unsere Leidenschaft für Blumen</h2>
+        <p class="section-subtitle">
+          Wir glauben, dass Blumen mehr als nur Dekoration sind – sie sind Botschafter der Gefühle.
+          Seit 1999 kreieren wir mit viel Liebe zum Detail einzigartige Arrangements,
+          die jeden Moment besonders machen. Bei uns finden Sie Frische, Qualität
+          und handwerkliche Perfektion aus Meisterhand.
+        </p>
+        <a href="#" class="btn btn-outline">Über Uns</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       CATALOG
+       ======================================== -->
+  <section class="section catalog" id="catalog" aria-label="Blumenkatalog">
+    <div class="container">
+
+      <div class="catalog-header reveal">
+        <h2 class="section-title">Unsere Sträuße</h2>
+        <p class="section-subtitle" style="margin:0 auto">Handgebundene Arrangements für jeden Anlass</p>
+      </div>
+
+      <div class="products-grid">
+
+        <article class="product-card reveal" style="transition-delay:0.1s">
+          <!--
+            ЯК ДОДАТИ ФОТО ТОВАРУ:
+            Заміни div.product-image на:
+            <img src="images/produkt-1.jpg" alt="Zarter Traum" class="product-image">
+          -->
+          <div class="product-image" style="background:linear-gradient(135deg,#fce4ec,#e8a0b4);display:flex;align-items:center;justify-content:center;font-size:2rem;">🌸</div>
+          <div class="product-body">
+            <h3 class="product-name">Zarter Traum</h3>
+            <p class="product-desc">Ein Spiel aus Reinheit und Romantik. Diese Kombination aus schneweißen und sanft rosa Rosen strahlt pure Eleganz aus.</p>
+            <div class="product-footer">
+              <span class="product-price">45 €</span>
+              <button class="btn btn-primary" onclick="addToCart('Zarter Traum')">Kaufen</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="transition-delay:0.2s">
+          <div class="product-image" style="background:linear-gradient(135deg,#f8bbd0,#c4587a);display:flex;align-items:center;justify-content:center;font-size:2rem;">🌺</div>
+          <div class="product-body">
+            <h3 class="product-name">Sonnengarten</h3>
+            <p class="product-desc">Ein lebendiger Mix aus fröhlichen rosa Rosen, leuchtend gelben Akzenten und verspielten Kamilien.</p>
+            <div class="product-footer">
+              <span class="product-price">45 €</span>
+              <button class="btn btn-primary" onclick="addToCart('Sonnengarten')">Kaufen</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal" style="transition-delay:0.3s">
+          <div class="product-image" style="background:linear-gradient(135deg,#e8f5e9,#a5d6a7);display:flex;align-items:center;justify-content:center;font-size:2rem;">🌿</div>
+          <div class="product-body">
+            <h3 class="product-name">Puristische Eleganz</h3>
+            <p class="product-desc">Edle, großblütige weiße Rosen in ihrer schönsten Form. Schlicht, luxuriös und von atemberaubender Frische.</p>
+            <div class="product-footer">
+              <span class="product-price">45 €</span>
+              <button class="btn btn-primary" onclick="addToCart('Puristische Eleganz')">Kaufen</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="catalog-center reveal">
+        <a href="#" class="btn btn-primary">Jetzt entdecken</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       PROCESS
+       ======================================== -->
+  <section class="section process" id="process" aria-label="Unser Prozess">
+    <div class="container">
+      <div class="process-grid">
+
+        <div class="process-item reveal">
+          <div class="process-num">1</div>
+          <h3>Frisch gebunden</h3>
+          <p>Ihr Strauß wird erst nach Ihrer Bestellung von unseren Floristen handgefertigt.</p>
+        </div>
+
+        <div class="process-item reveal" style="transition-delay:0.15s">
+          <div class="process-num">2</div>
+          <h3>Sicher verpackt</h3>
+          <p>Wir nutzen spezielle Frischeboxen, damit Ihre Blumen hydratisiert und unversehrt ankommen.</p>
+        </div>
+
+        <div class="process-item reveal" style="transition-delay:0.3s">
+          <div class="process-num">3</div>
+          <h3>Schnelle Lieferung</h3>
+          <p>Heute bestellt, morgen geliefert. Ab 50 € schenken wir Ihnen die Versandkosten!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       REVIEWS
+       ======================================== -->
+  <section class="section" id="reviews" aria-label="Kundenbewertungen">
+    <div class="container">
+
+      <div class="reviews-header reveal">
+        <h2 class="section-title">Das sagen unsere Kunden</h2>
+      </div>
+
+      <div class="slider-wrapper" aria-live="polite">
+        <div class="slider-track" id="sliderTrack">
+
+          <div class="review-card">
+            <div class="review-quote" aria-hidden="true">"</div>
+            <p class="review-text">Super schneller Versand und top Service. Die Lieferung kam pünktlich an und die Verpackung war sehr sicher. Gerne wieder!</p>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">EB</div>
+              <span class="review-name">Emma B.</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-quote" aria-hidden="true">"</div>
+            <p class="review-text">Der Strauß sah exakt so aus wie auf den Fotos und hat über eine Woche lang perfekt gehalten.</p>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">JM</div>
+              <span class="review-name">Jason M.</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-quote" aria-hidden="true">"</div>
+            <p class="review-text">Man merkt, dass hier mit Leidenschaft gearbeitet wird. Absolut empfehlenswert!</p>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">SL</div>
+              <span class="review-name">Sarah L.</span>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-quote" aria-hidden="true">"</div>
+            <p class="review-text">Wunderschöne Blumen zum Muttertag bestellt. Mama war begeistert – werden wieder bestellen!</p>
+            <div class="review-author">
+              <div class="review-avatar" aria-hidden="true">TK</div>
+              <span class="review-name">Thomas K.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slider-controls" role="group" aria-label="Slider-Navigation">
+        <button class="slider-btn" id="sliderPrev" aria-label="Zurück">&#8592;</button>
+        <button class="slider-btn" id="sliderNext" aria-label="Weiter">&#8594;</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       ORDER FORM
+       ======================================== -->
+  <section class="section order" id="order" aria-label="Schnellbestellung">
+    <div class="container order-inner">
+
+      <h2 class="section-title reveal">Schnellbestellung</h2>
+      <p class="reveal">Lassen Sie uns die Details besprechen. Wir rufen Sie zurück!</p>
+
+      <form class="form reveal" id="orderForm" novalidate aria-label="Bestellformular">
+
+        <div>
+          <label for="inputName" class="sr-only">Name</label>
+          <input type="text" id="inputName" class="form-input" placeholder="Name" autocomplete="name" aria-required="true" />
+          <p class="form-error-msg" id="nameError" role="alert">Bitte geben Sie Ihren Namen ein.</p>
+        </div>
+
+        <div>
+          <label for="inputPhone" class="sr-only">Telefonnummer</label>
+          <input type="tel" id="inputPhone" class="form-input" placeholder="Telefonnummer" autocomplete="tel" aria-required="true" />
+          <p class="form-error-msg" id="phoneError" role="alert">Bitte geben Sie eine gültige Telefonnummer ein.</p>
+        </div>
+
+        <div>
+          <label for="inputBouquet" class="sr-only">Wunschstrauß</label>
+          <input type="text" id="inputBouquet" class="form-input" placeholder="Wunschstrauß (optional)" />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;padding:16px">
+          Anfrage senden
+        </button>
+
+        <p id="formSuccess" style="display:none;color:var(--color-primary);font-weight:700;margin-top:8px" role="status">
+          ✅ Vielen Dank! Wir melden uns bald bei Ihnen.
+        </p>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ========================================
+       CONTACT & HOURS
+       ======================================== -->
+  <section class="section" id="contact" aria-label="Kontakt und Öffnungszeiten">
+    <div class="container">
+
+      <h2 class="section-title reveal" style="text-align:center;margin-bottom:48px">
+        Kontakt &amp; Öffnungszeiten
+      </h2>
+
+      <div class="contact-inner">
+
+        <ul class="contact-list reveal" role="list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">📍</span>
+            <span>Blumengasse 12, 10115 Berlin</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">📞</span>
+            <a href="tel:+4930123456">Tel: +49 30 1234567</a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">✉️</span>
+            <a href="mailto:info@ihreshop.de">E-Mail: info@ihreshop.de</a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">🕐</span>
+            <div>
+              <div>Mo – Fr: 09:00 – 19:00</div>
+              <div>Sa: 10:00 – 18:00</div>
+            </div>
+          </li>
+        </ul>
+
+        <!--
+          ЯК ДОДАТИ GOOGLE MAPS:
+          1. Зайди на maps.google.com
+          2. Знайди адресу → Share → Embed a map
+          3. Скопіюй <iframe ...> і встав тут замість div нижче
+        -->
+        <div class="map-placeholder reveal" style="transition-delay:0.2s" role="img" aria-label="Kartenansicht">
+          <span aria-hidden="true">🗺️</span>
+          <p>Google Maps hier einbinden</p>
+          <small>iframe von maps.google.com</small>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer" aria-label="Seitenende">
+    <div class="container">
+
+      <div class="footer-inner">
+        <div class="footer-logo">🌸 Blumenshop</div>
+
+        <nav class="footer-nav" aria-label="Footer-Navigation">
+          <a href="#about">Über uns</a>
+          <a href="#catalog">Katalog</a>
+          <a href="#process">Lieferung</a>
+          <a href="#reviews">Bewertungen</a>
+          <a href="#contact">Kontakte</a>
+        </nav>
+
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Blumenshop. Alle Rechte vorbehalten.</p>
+        <div class="payment-icons" aria-label="Zahlungsmethoden">
+          <span class="payment-badge">PayPal</span>
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">Mastercard</span>
+          <span class="payment-badge">Apple Pay</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Кнопка "повернутись нагору" -->
+  <button class="scroll-top" id="scrollTop" aria-label="Nach oben scrollen">&#8679;</button>
+
+  <!--
+    Підключення JS в кінці <body> — це правильна практика!
+    Чому в кінці? Щоб HTML завантажився раніше ніж JS почне його шукати.
+    defer — теж варіант, але в кінці body працює так само добре.
+  -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
