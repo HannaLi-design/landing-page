@@ -232,13 +232,13 @@ ul { list-style: none; }
 }
 
 .hero-image-wrap img {
-  border-radius: 50% 30% 50% 30%;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   animation: float 6s ease-in-out infinite;
   width: 100%;
   max-width: 420px;
+  max-height: 460px;
   margin: 0 auto;
-  min-height: 380px;
   object-fit: cover;
 }
 
