@@ -237,7 +237,7 @@ ul { list-style: none; }
   animation: float 6s ease-in-out infinite;
   width: 100%;
   max-width: 420px;
-  max-height: 460px;
+  max-height: 320px;
   margin: 0 auto;
   object-fit: cover;
 }
