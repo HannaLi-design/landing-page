@@ -223,6 +223,8 @@ ul { list-style: none; }
 
 .hero-image-wrap {
   position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Плаваюча анімація для фото */
@@ -234,15 +236,17 @@ ul { list-style: none; }
 .hero-image-wrap img {
   border-radius: 12px;
   box-shadow: var(--shadow);
-  animation: float 6s ease-in-out infinite;
-  width: 100%;
-  max-width: 420px;
-  max-height: 320px;
+  /* animation: float 6s ease-in-out infinite; */
+  max-width: 100%;
+  max-height: 100%;
   margin: 0 auto;
   object-fit: cover;
+  margin-right: 70px;
 }
 
-.hero-content { text-align: left; }
+.hero-content { text-align: left;
+margin-left: 50px;
+}
 
 .hero-title {
   font-family: var(--font-display);
@@ -305,15 +309,17 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .about-image {
   border-radius: 20px 4px 20px 4px;
   box-shadow: var(--shadow);
-  min-height: 340px;
+  height: 440px;
   width: 100%;
+  object-position: center;
   object-fit: cover;
+  display: block;
 }
 
 .about-content .section-subtitle {
