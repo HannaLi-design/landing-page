@@ -307,8 +307,8 @@ margin-left: 50px;
    ============================================= */
 .about-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 70% 70%;
+  gap: 90px;
   align-items: stretch;
 }
 
